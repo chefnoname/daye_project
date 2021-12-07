@@ -1,0 +1,28 @@
+.cardContainer {
+  padding: 30px;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.typeOfTampon {
+  width: 500px;
+  height: 100px;
+  /* padding: 30px; */
+}
+
+.coating {
+  margin-bottom: 10px;
+}
+
+.counter {
+  width: 100px;
+  display: flex;
+  /* background-color: lawngreen; */
+  justify-content: space-evenly;
+}
+
+.counter button {
+  height: 20px;
+}
