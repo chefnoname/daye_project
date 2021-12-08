@@ -13,39 +13,39 @@ const TamponHeader = () => {
       const res = await fetch("https://front-end-test-bvhzjr6b6a-uc.a.run.app");
       const data = await res.json();
 
-      //MOVE THIS FUNCTION INTO AN EXTERNAL OUTSIDE OF REACT COMPONENT
-
-      data.map((tampon) => {
-        // rename object keys from tapons to tampons
-        if (tampon.tapons) {
-          tampon.tampons = tampon.tapons;
-          delete tampon.tapons;
-        }
-
-        //convert XML into JSON
-        if (typeof tampon.tampons === "string") {
-          let parseString = require("xml2js").parseString;
-          let xml = tampon.tampons;
-          parseString(xml, function (err, result) {
-            // console.log(result, "this is the xml");
-            let newTamponArr = result.tapons.tampon.map((tampon) => ({
-              amount: Number(tampon.amount[0]),
-              coating: tampon.coating[0],
-              size: tampon.size[0],
-            }));
-            tampon.tampons = newTamponArr;
-          });
-        }
-        return tampon;
-      });
-      setTamponArr(data);
-      setTamponImg(data[0].productImage);
+      let initializedData = initializeData(data);
+      setTamponArr(initializedData);
+      setTamponImg(initializedData[0].productImage);
     };
 
     getTamponObj();
   }, []);
 
-  console.log(tamponImg);
+  const initializeData = (obj) => {
+    let initializedData = obj.map((tampon) => {
+      // rename object keys from tapons to tampons
+      if (tampon.tapons) {
+        tampon.tampons = tampon.tapons;
+        delete tampon.tapons;
+      }
+
+      //convert XML into JSON
+      if (typeof tampon.tampons === "string") {
+        let parseString = require("xml2js").parseString;
+        let xml = tampon.tampons;
+        parseString(xml, function (err, result) {
+          let newTamponArr = result.tapons.tampon.map((tampon) => ({
+            amount: Number(tampon.amount[0]),
+            coating: tampon.coating[0],
+            size: tampon.size[0],
+          }));
+          tampon.tampons = newTamponArr;
+        });
+      }
+      return tampon;
+    });
+    return initializedData;
+  };
 
   // Overkill
 
