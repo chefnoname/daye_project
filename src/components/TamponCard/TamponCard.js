@@ -1,3 +1,4 @@
+import Alert from "@mui/material/Alert";
 import { useState } from "react";
 import "./TamponCard.css";
 
@@ -16,19 +17,31 @@ const TamponCard = ({ price, tampon }) => {
   return (
     <div className="cardContainer">
       <div className="typeOfTampon">
-        <div className="coating">{coating === "none" ? "No CBD" : coating}</div>
-        <div className="size">{size}</div>
-        <div className="price">£{price}</div>
+        <h3 className="coating">{coating === "none" ? "No CBD" : coating}</h3>
+        <h3 className="size">{size}</h3>
+        <h3 className="price">£{price}</h3>
       </div>
       <div className="counter">
         <button onClick={decrementCounter} disabled={counter === 0}>
           -
         </button>
-        {counter}
+        <span className="counterNumber">
+          <h3>{counter}</h3>
+        </span>
         <button onClick={incrementCounter} disabled={amount === counter}>
           +
         </button>
-        {counter === amount ? <span>Sorry! This item has run out!</span> : null}
+        <span className="alert">
+          {counter === amount ? (
+            <Alert
+              severity="error"
+              sx={{ transform: "scale(0.75)", fontSize: "16px" }}
+              className="alertText"
+            >
+              Sorry! This item has run out!
+            </Alert>
+          ) : null}
+        </span>
       </div>
     </div>
   );

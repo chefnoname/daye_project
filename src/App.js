@@ -1,10 +1,14 @@
+import NavBar from "./components/NavBar/NavBar";
+import TamponHeader from "./components/TamponHeader/TamponHeader";
+import GitHubLink from "./components/GithubLink";
 import "./App.css";
-import TamponCarousel from "./components/TamponCarousel/TamponCarousel";
 
 const App = () => {
   return (
     <>
-      <TamponCarousel />
+      <NavBar />
+      <TamponHeader />
+      <GitHubLink />
     </>
   );
 };

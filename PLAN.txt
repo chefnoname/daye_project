@@ -3,7 +3,7 @@ AIM OF PROJECT:
  - Clone the top half of the yourdaye.com/box/
  - A carousel displaying each tampon, price and if coated with CBD. (Also if product is low something to show popularity)
  - If you click on a tampon, it will update a basket found in the top right of page.
- - Checkout button displays a dropdown box with buttons to add more tampons (this will update the basket)
+ - Checkout component displays a dropdown box with buttons to add more tampons (this will update the basket)
 
 
 WHAT I FOUND QUITE TRICKY:
@@ -12,6 +12,7 @@ WHAT I FOUND QUITE TRICKY:
 
 
 COULD OF DONE DIFFERENT:
+- Gone with the original plan of a clone with a carousel displaying the tampons.
 
 
 
@@ -19,3 +20,5 @@ FEATURES I COULD OF ADDED:
 - Rendering the image on each card had they been different images as this would of made the app more scalable if we wanted to 
   resuse the component (similar reason for currency)
 - useContext/Redux to make the counter state update a basket as you increment the button.
+- In the TamponCard, I would of added a description box highlighting why theres a price difference/ product description 
+  had it been found in the object 

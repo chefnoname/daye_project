@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: rgb(0, 58, 27);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 58, 27, 1) 32%,
+    rgba(0, 134, 62, 1) 100%
+  );
+}

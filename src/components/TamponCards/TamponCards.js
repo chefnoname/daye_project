@@ -1,8 +1,6 @@
 import { Typography } from "@mui/material";
 import TamponCard from "../TamponCard/TamponCard";
 
-import "./TamponCards.css";
-
 const TamponCards = ({ price, tampons }) => {
   return (
     <>

@@ -1,0 +1,12 @@
+nav {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navBar {
+  font-size: 40px;
+  margin-right: 50px;
+  margin-top: 10px;
+  color: #3a001f;
+}
