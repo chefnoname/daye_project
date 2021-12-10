@@ -1,4 +1,4 @@
-import TamponCard from "../TamponCard/TamponCard";
+import TamponStockCounter from "../TamponStockCounter/TamponStockCounter";
 import "./TamponCardContainer.css";
 
 const TamponCardContainer = ({ tamponBoxs }) => {
@@ -21,7 +21,7 @@ const TamponCardContainer = ({ tamponBoxs }) => {
 
         <div className="coatingInfo">
           {tampons.map((tampon, i) => (
-            <TamponCard tampon={tampon} key={i} />
+            <TamponStockCounter tampon={tampon} key={i} />
           ))}
         </div>
       </div>

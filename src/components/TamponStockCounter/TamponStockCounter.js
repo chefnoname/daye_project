@@ -2,7 +2,7 @@ import Alert from "@mui/material/Alert";
 import { useState } from "react";
 import "./TamponCard.css";
 
-const TamponCard = ({ tampon }) => {
+const TamponStockCounter = ({ tampon }) => {
   const { coating, amount } = tampon;
   const [counter, setCounter] = useState(0);
 
@@ -49,4 +49,4 @@ const TamponCard = ({ tampon }) => {
   );
 };
 
-export default TamponCard;
+export default TamponStockCounter;
