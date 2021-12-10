@@ -1,6 +1,6 @@
 import Alert from "@mui/material/Alert";
 import { useState } from "react";
-import "./TamponCard.css";
+import "./TamponStockCounter.css";
 
 const TamponStockCounter = ({ tampon }) => {
   const { coating, amount } = tampon;
