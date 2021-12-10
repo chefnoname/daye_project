@@ -2,26 +2,18 @@
   padding: 20px;
   height: 150px;
   width: 80%;
-  margin: 40px auto;
-  display: flex;
-  border-radius: 10px;
-  background-color: #3a001f;
+  margin: 0 auto;
 }
 
 .typeOfTampon {
   flex: 1;
+  text-align: center;
 }
 
 .coating {
   color: #eba920;
-  font-size: 30px;
+  font-size: 10px;
   font-weight: bolder;
-}
-
-.size {
-  margin-bottom: 5px;
-  color: rgba(0, 134, 62, 1);
-  font-size: 20px;
 }
 
 .counter {
@@ -33,11 +25,11 @@
 }
 
 .counter button {
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 30px;
   background-color: #c48b1a;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   margin: auto;
   border-radius: 5px;
 }
@@ -52,14 +44,10 @@
 }
 .alert {
   position: absolute;
-  top: 85px;
+  top: 45px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 426px) {
-  .cardContainer {
-    flex-direction: column;
-  }
-
   .coating {
     font-size: 16px;
   }
@@ -116,12 +104,12 @@
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .alert {
-    top: 80px;
-    right: -40px;
+    top: 20px;
+    right: -80px;
   }
 
   .alertText {

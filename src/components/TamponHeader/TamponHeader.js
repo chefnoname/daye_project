@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import TamponCards from "../TamponCards/TamponCards";
 import { AiFillCheckCircle } from "react-icons/ai";
-
+import TamponCardContainer from "../TamponCardContainer/TamponCardContainer";
+import dayeLogo from "../../assets/daye_logo.png";
 import "./TamponHeader.css";
 
 const TamponHeader = () => {
   const [tamponArr, setTamponArr] = useState([]);
-  const [tamponImg, setTamponImg] = useState("");
 
   useEffect(() => {
     const getTamponObj = async () => {
@@ -15,7 +14,6 @@ const TamponHeader = () => {
 
       let initializedData = initializeData(data);
       setTamponArr(initializedData);
-      setTamponImg(initializedData[0].productImage);
     };
 
     getTamponObj();
@@ -60,7 +58,7 @@ const TamponHeader = () => {
       <div className="container">
         <div className="leftHalf">
           <h1>Subscribe to Daye tampons</h1>
-          <img src={tamponImg} alt="" />
+          <img src={dayeLogo} alt="" />
 
           <div className="subscriptionBenefits">
             {subscriptionBenefits.map(([checkIcon, text], i) => (
@@ -77,12 +75,8 @@ const TamponHeader = () => {
           <h1>in stock</h1>
 
           <div className="tamponCards">
-            {tamponArr.map((tampon, i) => (
-              <TamponCards
-                price={tampon.price}
-                tampons={tampon.tampons}
-                key={i}
-              />
+            {tamponArr.map((tampons, i) => (
+              <TamponCardContainer tamponBoxs={tampons} key={i} />
             ))}
           </div>
         </div>

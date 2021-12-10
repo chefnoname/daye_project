@@ -32,6 +32,7 @@ h1 {
 
 .rightHalf h1 {
   position: absolute;
+  z-index: 100;
 }
 
 .tamponCards {
