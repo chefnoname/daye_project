@@ -1,46 +1,37 @@
 .container {
   width: 100vw;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   padding: 40px;
+  background: rgb(0, 58, 27);
 }
 
 .leftHalf {
-  width: 50%;
+  /* width: 50%; */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 .leftHalf img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   margin: 20px auto;
 }
 
 h1 {
   font-family: "Poppins", sans-serif;
-  margin: 20px auto;
-  width: 250px;
+  margin: 10px auto;
+  /* width: 250px; */
   text-align: left;
   color: white;
 }
 
-.rightHalf {
-  width: 50%;
-  overflow-y: scroll;
-}
-
-.rightHalf h1 {
-  position: absolute;
-  z-index: 100;
-}
-
-.tamponCards {
-  margin-top: 100px;
-}
-
 .subscriptionBenefits {
-  margin: 20px auto;
+  margin: auto -30px;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
 }
 
 .subscriptionPoints {

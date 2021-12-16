@@ -1,0 +1,18 @@
+.tamponAmount {
+  position: relative;
+  margin-top: 20px;
+}
+
+.tamponAmount p {
+  font-size: 22px;
+  color: white;
+}
+
+.tamponAmount span {
+  color: #3a001f;
+}
+
+.raindrop {
+  font-size: 30px;
+  position: absolute;
+}

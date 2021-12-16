@@ -1,25 +1,25 @@
 .tamponCardContainer {
   padding: 20px;
   height: 300px;
-  width: 80%;
-  margin: 100px auto;
+  width: 530px;
+  margin: 30px auto;
   display: flex;
   border-radius: 10px;
-  background-color: #3a001f;
+  /* background-color: #3a001f; */
+  background: rgb(0, 58, 27);
+
   position: relative;
-  flex-direction: column;
 }
 
 .tamponHeader {
-  position: relative;
+  width: 50%;
+  /* background-color: blue; */
 }
 
 .tamponPic img {
-  width: 150px;
-  height: 150px;
-  bottom: -30px;
-  left: 150px;
-  position: absolute;
+  width: 170px;
+  height: 170px;
+  margin-top: 20px;
 }
 
 .coatingInfo {
@@ -27,12 +27,30 @@
   margin-top: 50px;
 }
 
-.sizingInfo {
-  color: rgba(0, 134, 62, 1);
+.sizingInfo,
+.rightSideOfCard {
+  color: #c48b1a;
   font-size: 20px;
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
+}
+
+.rightSideOfCard {
+  /* background-color: blueviolet; */
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSideOfCard p {
+  flex: 1;
+}
+
+.tamponInfo {
+  flex: 2;
 }
 
 @media screen and (min-width: 320px) and (max-width: 426px) {

@@ -10,9 +10,14 @@ WHAT I FOUND QUITE TRICKY:
 
 - Turning the XML object into JSON
 
+Would of done it differently but I wanted to get a solution out to you guys as soon as and thought this was the most effficient
+way of displaying the data.
 
 COULD OF DONE DIFFERENT:
 - Gone with the original plan of a clone with a carousel displaying the tampons.
+- Made the options for CBD and No CBD a dropdown menu, with a quantity of how many are in stock
+- An Add button, to which increments a basket
+- A hover animation over the basket to show how much they're total is and how many amounts they have
 
 
 
