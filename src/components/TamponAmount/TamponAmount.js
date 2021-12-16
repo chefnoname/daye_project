@@ -10,7 +10,7 @@ const TamponAmount = ({ tampon }) => {
     <div className="tamponAmount" data-aos="zoom-in">
       <p>
         <strong> {amount} </strong> <span>X </span>
-        {coating === "none" ? "No CBD" : "CBD"} Tampons
+        {coating === "none" ? "Normal" : "CBD"} Tampons
         {coating !== "none" && (
           <span className="raindrop">
             <WiRaindrop />
