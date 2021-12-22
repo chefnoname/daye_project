@@ -8,7 +8,9 @@ const TamponBody = () => {
 
   useEffect(() => {
     const getTamponObj = async () => {
-      const res = await fetch("https://front-end-test-bvhzjr6b6a-uc.a.run.app");
+      const res = await fetch(
+        "https://front-end-technical-test-bvhzjr6b6a-ew.a.run.app"
+      );
       const data = await res.json();
 
       let initializedData = initializeData(data);
